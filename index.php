@@ -105,16 +105,39 @@ if($horaslaboradas<=40){
 
 }
 echo("el salario devengado en la semana : $".$pago);
+echo("<br><br>..........................................................");
 // ejercicio 5 
 
-
+$sucursalB=20000000; 
+$sucursalC=15000000;
 $sucursalA=array(
-    'usuario1'=>array('nombre'=>"pedro",'telefono'=>2355678,'direccion'="cr 56 # 30-28",'salario'=>2.500000),
+    'usuario1'=>array('nombre'=>"pedro",'telefono'=>2355678,'direccion'=>"cr 56 # 30-28",'salario'=>2.500000),
     'usuario2'=>array('nombre'=>"juan",'telefono'=>6345678,'direccion'=>"cr36a #45-78",'salario'=>1.633000),
     'usuario3'=>array('nombre'=>"sandra",'telefono'=>3245698,'direccion'=>"crb76 #65-07",'salario'=>3.650000),
-    'usuario4'=>array('nombre')
-    'usuario5'=>array('nombre')
-)
+    'usuario4'=>array('nombre'=>"camila",'telefono'=>5436710,'direccion'=>"cr27 #54-81",'salario'=>1000000),
+    'usuario5'=>array('nombre'=>"luis",'telefono'=>2370867,'direccion'=>"cll37 #72-10",'salario'=>2000000));
+    print_r($sucursalA);
+    echo("los usuarios registrados en la sucursalA son:")
+
+    function sumatoriaSalarios($sucursalA,$sucursalB,$sucursalC){
+        if($sucursalA>$sucursalB && $sucursalB>$sucursalC ){
+            echo("el mayor ingreso lo tiene la sucursal".$sucursalB);
+    }
+
+    // ejercicio 6 
+     $nuemrosPares=array(
+         'pares'=>array('nuemro1'=>2),
+         'pares'=>array('nuemro2'=>4),
+         'pares'=>array('nuemro3'=>6),
+         'pares'=>array('nuemro4'=>8),
+         'pares'=>array('nuemro5'=>10),
+         'pares'=>array('nuemro6'=>12,
+         'pares'=>array('nuemro7'=>14,
+         'pares'=>array('nuemro8'=>16),
+         'pares'=>array('nuemro9'=>18),
+         'pares'=>array('nuemro10'=>20));
+print_r($numerosPares);
+     
 ?>
 
 
