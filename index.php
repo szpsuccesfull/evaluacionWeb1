@@ -1,165 +1,230 @@
 <?php
 
 include('funciones.php');
+echo ("hecho por samuel zapata perez <br><br>");
 
-// ejercicio 1 
-echo("taller 1 elaborado por samuel zapata perez <br><br>");
+//Ejercicio 1
 
-echo (" ejercicio 1");
+echo("Ejercicio 1 <br><br>");
+$n1=123;
+$n2=456;
 
-$n1=200;
- $n2=450;
+echo("N1 = ".$n1."<br>");
+echo("N2 = ".$n2."<br><br>");
 
-echo("n1 =".$n1."<br>");
-echo("n2 =".$n2."<br><br>");
- 
-echo("suma <br>");
+echo("Suma <br>");
 
-  $suma=$n1+$n2;
-  
-  echo(" la suma de de los numeros es : ".$suma."<br><br>");
+$suma=$n1+$n2;
 
-  echo("resta <br>");
-  $resta=$n1-$n2;
-  echo(" la resta de los numeros es  :".$resta."<br><br>");
+echo("la suma de los numeros n1 y n2 es : ".$suma."<br><br>");
 
-  echo("multiplicacion <br>");
-  $multiplicacion=$n1*$n2;
-  echo(" la multiplicacion de los numeros es :".$multiplicacion."<br><br>");
+echo("Resta <br>");
+$resta=$n1-$n2;
 
-  echo("division <br>");
-  $division=$n1/$n2;
-  echo("la division de los numeros es :".$division. "<br><br>");
+echo("la resta de los numeros n1 y n2 es : ".$resta."<br><br>");
 
+echo("Multipliacion <br>");
+$multiplicacion=$n1*$n2;
 
+echo("la multiplicacion de los numeros n1 y n2 es : ".$multiplicacion."<br><br>");
 
-// ejercicio 2 
+echo("Division <br>");
+$division=$n1/$n2;
+echo("la division de los numeros n1 y n2 es : ".$division."<br><br>");
 
-echo ( "<br><br> ejercicio 2 <br><br>");
-echo ("calcular el indice de masa corporal<br>");
+//Ejercicio 2
+/*La clasificación del IMC es la siguiente:
+    • IMC <= 18,4 (Insuficiencia de peso)
+    • 18,5<=IMC<=24,9 (Peso normal)
+    • 25<=IMC<=29,9 (Sobrepeso)
+    • 30<=IMC<=34,9 (Obesidad 1)
+    • 35<=IMC<=39,9 (Obesidad 2)
+    • IMC>=40 (Obesidad 3)
+*/
+echo("<br><br>Ejercicio 2 <br><br>");
+echo("Calcular el índice de masa corporal <br>");
 
 $peso=85;
 $altura=1.78;
-echo("<br>el peso del usuario es =".$peso."kg <br>");
-echo("<br> la altura del usuario es = ".$altura." <br>");
+echo("<br>El peso del usuario es =".$peso." kg <br>");
+echo("<br>la altura del usuario es =".$altura." m <br>");
+$imc=$peso/($altura*$altura);
 
-$imc =$peso/($altura*$altura);
+echo("<br>El Indice de masa corporal del usuario es =".$imc."<br>");
 
-
-echo("<br>el peso del usuario es =".$peso."kg"."la altura del usuario es :".$altura." <br>");
-echo("<br> el indice de masa corporal del usuario es =".$imc."<br>");
-
-
-if($imc<=18.4){
-    echo("el usuario tiene insuficiencia de peso <br>");
-}else if  ($imc>=18.5 && $imc<=24.9){
-    echo("el usuario tiene peso normal <br>");
+if($imc<= 18.4){
+    echo("El usuario tiene Insuficiencia de peso <br>");
+}else if($imc>=18.5 && $imc<=24.9){
+    echo("El usuario tiene Peso normal <br>");
 }else if($imc>=25 && $imc<=29.9){
-    echo("el usuario tiene sobrepeso <br>");
+    echo("El usuario tiene sobrepeso <br>");
 }else if($imc>=30 && $imc<=34.9){
-    echo("el usuario tiene obesidad 1 <br>");
-}else if ($imc>=35 && $imc<=39.9){
-    echo("el usuario tiene obesidad 2 <br>");
+    echo("El usuario tiene Obesidad 1 <br>");
+}else if($imc>=35 && $imc<=39.9){
+    echo("El usuario tiene Obesidad 2 <br>");
 }else{
-    echo("el usuario tiene obesidad 3 <br>");
+    echo("El usuario tiene Obesidad 3 <br>");
 }
-
 
 // ejercicio 3 
 
-echo("<br><br> ejercicio 3<br><br>");
-echo("pormocion descuento");
+echo("<br><br> Ejercicio 3 <br><br>");
+echo("Promocion Descuentos <br><br>");
 
-$cantzapatosvendidos=5;
-$precioparzapatos=150000;
+$Cantzapatosvendidos=5;
+$Precioparzapatos=150000;
+echo("Cantidad de zapatas vendidos : ".$Cantzapatosvendidos." <br>");
 
-if ($cantzapatosvendidos==3){
-    $descuento=$precioparzapatos*0.1;
-     $valor=$precioparzapatos-$descuento;
-     echo("el valor a pagar es : $ ".$valor. "el descuento fue del 10% de : ".$descuento."<br>");
-}else if ($cantzapatosvendidos> 3 && $cantzapatosvendidos<= 5){
-    $descuento=$precioparzapatos*0.2;
-    $valor=$precioparzapatos-$descuento;
-    echo("el valor a pagar es : $".$valor. " el descuento fue del 20% de : ".$descuento."<br>");
-}else if($cantzapatosvendidos>5){
-    $descuento=$precioparzapatos*0.4;
-    $valor=$precioparzapatos-$descuento;
-    echo( "el a pagar es : $".$valor." el descuento fue del 40% : ".$descuento."<br>");
+$valorneto=$Cantzapatosvendidos*$Precioparzapatos;
+echo("Valor total sin descuento : $".$valorneto." <br>");
+
+if($Cantzapatosvendidos== 3){
+    $descuento=$valorneto*0.1;
+    $valor=$valorneto-$descuento;
+    echo("El valor a pagar con descuento es : $ ".$valor. " El descuento fue del 10% de : ".$descuento." <br>");
+}else if($Cantzapatosvendidos> 3 && $Cantzapatosvendidos<= 5){
+    $descuento=$valorneto*0.2;
+    $valor=$valorneto-$descuento;
+    echo("El valor a pagar con descuento es : $".$valor. " El descuento fue del 20% de : ".$descuento." <br>");
+}else if($Cantzapatosvendidos> 5 ){
+    $descuento=$valorneto*0.4;
+    $valor=$valorneto-$descuento;
+    echo("El valor a pagar con descuento es : $".$valor. " El descuento fue del 40% de : ".$descuento." <br>");
 }else{
-    echo("el valor a pagar es : $".$precioparzapatos. "<br>");
     
+    echo("El valor a pagar es : $".$valorneto." <br>");
 }
-echo("cantidad vendida :".$cantzapatosvendidos."<br>");
-echo("costo neto :".$precioparzapatos."cantidad".$cantzapatosvendidos);
+
 // ejercicio 4 
 
-echo("<br><br> ejercicio 4 <br>");
-
+echo("<br><br> Ejercicio 4 <br><br>");
+echo("Sueldo Semanal <br><br>");
 
 $horaslaboradas=36;
-$horaSinExtra=20000;
-$extras=25000;
+
+echo("Horas laboradas : $".$horaslaboradas."<br>");
+
 if($horaslaboradas<=40){
     $pago=$horaslaboradas*20000;
-    echo(" para un total de 36 horas, se obtiene un valor hora de: $".$horaSinExtra."<br>");
+    echo("Sueldo Semanal es : $".$pago."<br>");
+    echo("valor hora es de $20000 <br>");
 
-}else if($horaslaboradas>40){
+}else{
     $pago=$horaslaboradas*25000;
+    echo("Sueldo Semanal es : $".$pago."<br>");
+    echo("valor hora es de $25000 <br>");
 
-}
-echo("el salario devengado en la semana : $".$pago);
-echo("<br><br>..........................................................");
-// ejercicio 5 
+    // ejercicio 5 
 
-$sucursalB=20000000; 
-$sucursalC=15000000;
-$sucursalA=array(
-    'usuario1'=>array('nombre'=>"pedro",'telefono'=>2355678,'direccion'=>"cr 56 # 30-28",'salario'=>2.500000),
-    'usuario2'=>array('nombre'=>"juan",'telefono'=>6345678,'direccion'=>"cr36a #45-78",'salario'=>1.633000),
-    'usuario3'=>array('nombre'=>"sandra",'telefono'=>3245698,'direccion'=>"crb76 #65-07",'salario'=>3.650000),
-    'usuario4'=>array('nombre'=>"camila",'telefono'=>5436710,'direccion'=>"cr27 #54-81",'salario'=>1000000),
-    'usuario5'=>array('nombre'=>"luis",'telefono'=>2370867,'direccion'=>"cll37 #72-10",'salario'=>2000000));
-    print_r($sucursalA);
-    echo("los usuarios registrados en la sucursalA son:")
+    echo("<br><br> Ejercicio 5 <br><br>");
+echo("Almacenar Datos sucursal A <br>");
 
-    foreach ($arregloMultidimensional as $claveSucursal=>$arregloUnidimensional){
-        echo($arregloUnidimensional);
+$sucursalA=array('usuario1'=>array('Nombre'=>"Juan",'Telefono'=>1234567,'Direccion'=>"Calle 1",'Salario'=>1000000),
+                'usuario2'=>array('Nombre'=>"Maria",'Telefono'=>2345678,'Direccion'=>"Calle 2",'Salario'=>1500000),
+                'usuario3'=>array('Nombre'=>"James",'Telefono'=>3456789,'Direccion'=>"Calle 3",'Salario'=>200000),
+                'usuario4'=>array('Nombre'=>"Sandra",'Telefono'=>4567890,'Direccion'=>"Calle 4",'Salario'=>2500000),
+                'usuario5'=>array('Nombre'=>"David",'Telefono'=>5678901,'Direccion'=>"Calle 5",'Salario'=>3000000));
 
-    foreach ($arregloUnidimensional as $salario=>$valor){
-        echo ($valor)."<br>";
+
+foreach($sucursalA as $clavemayorunidimensional=>$sucursalA){    
+    echo ("<br>Los datos del ".$clavemayorunidimensional." de la Sucursal A, son :<br>");
+    foreach ($sucursalA as $clave=>$valor){
+    echo($clave." es : ".$valor."<br>");
     }
-    echo ("<br>");
 }
-        if($sucursalA>$sucursalB && $sucursalB>$sucursalC ){
-            echo("el mayor ingreso lo tiene la sucursal".$sucursalB);
-    }
+    $salariosSucursalA=sumatoriaSalarios(1000000,1500000,200000,2500000,3000000);
+    
+    
+if($salariosSucursalA>20000000 && $salariosSucursalA>15000000){
+    echo("<br>La mejor sumatoria de salarios la tiene la Sucursal A ");
+    echo ("<br>Los salarios de la sucursal A suman : $".$salariosSucursalA."<br>");
+}else{
+    echo("<br>La mejor sumatoria de salarios la tiene la Sucursal B :$20'000.000");
+    echo ("<br>Los salarios de la sucursal A suman : $".$salariosSucursalA."<br>");
+}
 
-    // ejercicio 6 
-     $nuemrosPares=array(
-         'pares'=>array('nuemro1'=>2),
-         'pares'=>array('nuemro2'=>4),
-         'pares'=>array('nuemro3'=>6),
-         'pares'=>array('nuemro4'=>8),
-         'pares'=>array('nuemro5'=>10),
-         'pares'=>array('nuemro6'=>12,
-         'pares'=>array('nuemro7'=>14,
-         'pares'=>array('nuemro8'=>16),
-         'pares'=>array('nuemro9'=>18),
-         'pares'=>array('nuemro10'=>20));
-         echo("el primer numero par es : "."<br>");
 
-print_r($numerosPares);
-  
+echo("<br><br>................................<br><br>");
+}
+
+// ejercicio 6 
+
+echo("<br><br> Ejercicio 6 <br><br>");
+echo("Numeros Pares <br><br>");
+
+$pares=array('1°'=>2,'2°'=>4,'3°'=>6,'4°'=>8,'5°'=>10,'6°'=>12,'7°'=>14,'8°'=>16,'9°'=>18,'10°'=>20);
+foreach ($pares as $clavepares=>$valorpares){
+    echo("El ".$clavepares." numero par es: ".$valorpares."<br>");
+}
+
+echo("<br><br>................................<br><br>");
+
 // ejercicio 7 
 
-$salpicon=array(
-    'dulce1'=>"banano"),
-    'dulce2'=>"manzana"),
-    'dulce3'=>"durazno"),
-    'dulce4'=>"piña"),
-    'dulce5'=>"naranja"),
-    'dulce6'=>"lulo"));
+echo("<br><br> Ejercicio 7 <br><br>");
+echo("Salpicon<br>");
 
+$Salpicon=array('dulce1'=>"Banano,",'dulce2'=>"Manzana,",'dulce3'=>"Durazno,",'acido1'=>"Piña,",'acido2'=>"Naranja,",'acido3'=>"Lulo");
+ 
+    echo ("<br>El salpicon esta compuesto por: <br>");
+    print_r($Salpicon);
+
+echo("<br><br>................................<br><br>");
+
+// ejercicio 8 
+
+echo("<br><br> Ejercicio 8 <br><br>");
+echo("Calcular Edad <br><br>");
+
+// $edad=array('1991'=>calcularedad(2020,1991), '1995'=>calcularedad(2020,1995), '1987'=>calcularedad(2020,1987));
+// foreach ($edad as $claveedades=>$valoredades){
+//     echo("Si usted nacio en ".$claveedades." usted tiene: ".$valoredades."<br>");
+// }
+
+calcularedad(1991,2020);
+calcularedad(1995,2020);
+calcularedad(1987,2020);
+
+
+echo("<br><br>................................<br><br>");
+
+
+// ejercicio 9 
+
+echo("<br><br> Ejercicio 9 <br><br>");
+echo("Establecer el biotipo de los jugadores <br><br>");
+
+biotipojugadores(1.65);
+biotipojugadores(1.78);
+biotipojugadores(1.95);
+
+echo("<br><br>................................<br><br>");
+
+
+// ejercicio 10 
+
+echo("<br><br> Ejercicio 10 <br><br>");
+echo("Almacenar y Organizar la informacion de los mejores jugadores Colombianos <br><br>");
+
+$jugadores=array(
+    'Jugador 1'=>array('Nombre'=>"Radamel Falcao",'años'=>calcularedadjugadores(1986,2020),'posicion'=>"Delantero",'Biotipo'=>biotipojugadores10(1.77)),
+    'Jugador 2'=>array('Nombre'=>"James Rodríguez",'años'=>calcularedadjugadores(1991,2020),'posicion'=>"Mediocampista",'Biotipo'=>biotipojugadores10(1.81)),
+    'Jugador 3'=>array('Nombre'=>"Juan Cuadrado",'años'=>calcularedadjugadores(1988,2020),'posicion'=>"Delantero",'Biotipo'=>biotipojugadores10(1.78)),
+    'Jugador 4'=>array('Nombre'=>"Yerry Mina",'años'=>calcularedadjugadores(1994,2020),'posicion'=>"Defensor",'Biotipo'=>biotipojugadores10(1.95)),
+    'Jugador 5'=>array('Nombre'=>"David Ospina",'años'=>calcularedadjugadores(1988,2020),'posicion'=>"Portero",'Biotipo'=>biotipojugadores10(1.83)),
+    'Jugador 6'=>array('Nombre'=>"Davinsón Sanchez",'años'=>calcularedadjugadores(1996,2020),'posicion'=>"Delantero",'Biotipo'=>biotipojugadores10(1.87)),
+    'Jugador 7'=>array('Nombre'=>"Duvan Zapata",'años'=>calcularedadjugadores(1991,2020),'posicion'=>"Delantero",'Biotipo'=>biotipojugadores10(1.86)),
+    'Jugador 8'=>array('Nombre'=>"Wilmar Barrios",'años'=>calcularedadjugadores(1993,2020),'posicion'=>"Mediocampista",'Biotipo'=>biotipojugadores10(1.78)),
+    'Jugador 9'=>array('Nombre'=>"Mateus Uribe",'años'=>calcularedadjugadores(1991,2020),'posicion'=>"Mediocampista",'Biotipo'=>biotipojugadores10(1.80)));  
+
+    foreach($jugadores as $clavemayorjugadores=>$jugadores){    
+    echo ("<br>Los datos del ".$clavemayorjugadores.", son :<br>");
+    foreach ($jugadores as $clave=>$valor){
+    echo($clave." : ".$valor."<br>");
+    }
+}
+
+echo("<br><br>................................<br><br>");
 ?>
 
 
