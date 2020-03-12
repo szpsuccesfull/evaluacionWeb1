@@ -1,5 +1,6 @@
 <?php
 
+include('funciones.php');
 
 // ejercicio 1 
 echo("taller 1 elaborado por samuel zapata perez <br><br>");
