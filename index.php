@@ -42,10 +42,12 @@ $altura=1.78;
 echo("<br>el peso del usuario es =".$peso."kg <br>");
 echo("<br> la altura del usuario es = ".$altura." <br>");
 
-$imc =$peso/$altura*$altura;
+$imc =$peso/($altura*$altura);
 
 
+echo("<br>el peso del usuario es =".$peso."kg"."la altura del usuario es :".$altura." <br>");
 echo("<br> el indice de masa corporal del usuario es =".$imc."<br>");
+
 
 if($imc<=18.4){
     echo("el usuario tiene insuficiencia de peso <br>");
@@ -119,7 +121,14 @@ $sucursalA=array(
     print_r($sucursalA);
     echo("los usuarios registrados en la sucursalA son:")
 
-    function sumatoriaSalarios($sucursalA,$sucursalB,$sucursalC){
+    foreach ($arregloMultidimensional as $claveSucursal=>$arregloUnidimensional){
+        echo($arregloUnidimensional);
+
+    foreach ($arregloUnidimensional as $salario=>$valor){
+        echo ($valor)."<br>";
+    }
+    echo ("<br>");
+}
         if($sucursalA>$sucursalB && $sucursalB>$sucursalC ){
             echo("el mayor ingreso lo tiene la sucursal".$sucursalB);
     }
@@ -136,8 +145,20 @@ $sucursalA=array(
          'pares'=>array('nuemro8'=>16),
          'pares'=>array('nuemro9'=>18),
          'pares'=>array('nuemro10'=>20));
+         echo("el primer numero par es : "."<br>");
+
 print_r($numerosPares);
-     
+  
+// ejercicio 7 
+
+$salpicon=array(
+    'dulce1'=>"banano"),
+    'dulce2'=>"manzana"),
+    'dulce3'=>"durazno"),
+    'dulce4'=>"piña"),
+    'dulce5'=>"naranja"),
+    'dulce6'=>"lulo"));
+
 ?>
 
 
