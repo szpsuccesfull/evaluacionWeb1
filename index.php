@@ -113,17 +113,18 @@ if($horaslaboradas<=40){
     $pago=$horaslaboradas*25000;
     echo("Sueldo Semanal es : $".$pago."<br>");
     echo("valor hora es de $25000 <br>");
+}
 
     // ejercicio 5 
 
-    echo("<br><br> Ejercicio 5 <br><br>");
+ echo("<br><br> Ejercicio 5 <br><br>");
 echo("Almacenar Datos sucursal A <br>");
 
-$sucursalA=array('usuario1'=>array('Nombre'=>"Juan",'Telefono'=>1234567,'Direccion'=>"Calle 1",'Salario'=>1000000),
-                'usuario2'=>array('Nombre'=>"Maria",'Telefono'=>2345678,'Direccion'=>"Calle 2",'Salario'=>1500000),
-                'usuario3'=>array('Nombre'=>"James",'Telefono'=>3456789,'Direccion'=>"Calle 3",'Salario'=>200000),
-                'usuario4'=>array('Nombre'=>"Sandra",'Telefono'=>4567890,'Direccion'=>"Calle 4",'Salario'=>2500000),
-                'usuario5'=>array('Nombre'=>"David",'Telefono'=>5678901,'Direccion'=>"Calle 5",'Salario'=>3000000));
+$sucursalA=array('usuario1'=>array('Nombre'=>"pedro",'Telefono'=>1234567,'Direccion'=>"Calle 58",'Salario'=>1500000),
+                'usuario2'=>array('Nombre'=>"roberto",'Telefono'=>2345678,'Direccion'=>"Calle 7",'Salario'=>400000),
+                'usuario3'=>array('Nombre'=>"pepe",'Telefono'=>3456789,'Direccion'=>"Calle 6",'Salario'=>800000),
+                'usuario4'=>array('Nombre'=>"camilo",'Telefono'=>4567890,'Direccion'=>"Calle 78",'Salario'=>500000),
+                'usuario5'=>array('Nombre'=>"elbert",'Telefono'=>5678901,'Direccion'=>"Calle  50 -20",'Salario'=>2000000));
 
 
 foreach($sucursalA as $clavemayorunidimensional=>$sucursalA){    
@@ -132,7 +133,7 @@ foreach($sucursalA as $clavemayorunidimensional=>$sucursalA){
     echo($clave." es : ".$valor."<br>");
     }
 }
-    $salariosSucursalA=sumatoriaSalarios(1000000,1500000,200000,2500000,3000000);
+    $salariosSucursalA=sumatoriaSalarios(1500000,400000,800000,500000,2000000);
     
     
 if($salariosSucursalA>20000000 && $salariosSucursalA>15000000){
@@ -144,8 +145,10 @@ if($salariosSucursalA>20000000 && $salariosSucursalA>15000000){
 }
 
 
-echo("<br><br>................................<br><br>");
-}
+echo("<br>................................<br>");
+
+
+
 
 // ejercicio 6 
 
@@ -157,7 +160,7 @@ foreach ($pares as $clavepares=>$valorpares){
     echo("El ".$clavepares." numero par es: ".$valorpares."<br>");
 }
 
-echo("<br><br>................................<br><br>");
+echo("<br>................................<br>");
 
 // ejercicio 7 
 
@@ -169,7 +172,7 @@ $Salpicon=array('dulce1'=>"Banano,",'dulce2'=>"Manzana,",'dulce3'=>"Durazno,",'a
     echo ("<br>El salpicon esta compuesto por: <br>");
     print_r($Salpicon);
 
-echo("<br><br>................................<br><br>");
+echo("<br>................................<br>");
 
 // ejercicio 8 
 
@@ -186,7 +189,7 @@ calcularedad(1995,2020);
 calcularedad(1987,2020);
 
 
-echo("<br><br>................................<br><br>");
+echo("<br>................................<br>");
 
 
 // ejercicio 9 
@@ -198,7 +201,7 @@ biotipojugadores(1.65);
 biotipojugadores(1.78);
 biotipojugadores(1.95);
 
-echo("<br><br>................................<br><br>");
+echo("<br>................................<br>");
 
 
 // ejercicio 10 
@@ -224,7 +227,9 @@ $jugadores=array(
     }
 }
 
-echo("<br><br>................................<br><br>");
+echo("<br>................................<<br>");
+
+
 ?>
 
 
